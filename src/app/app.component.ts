@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
+
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'test';
+  public githubIcon = faGithub;
+  public subTitle = 'You know that guy Dan?';
+  public title = 'Dan Ferguson';
 }
