@@ -1,15 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { PageService } from 'src/services/page.service';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements OnInit, OnDestroy {
 
-  constructor() { }
+  constructor(private _pageService: PageService) { }
 
   ngOnInit() {
+    this._pageService.setTitle("Welcome stranger", "What's that dude up to?")
   }
 
+  ngOnDestroy(): void {
+    this._pageService.clear();
+  }
 }

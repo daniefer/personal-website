@@ -2,19 +2,21 @@
 
 <nav class="level">
   <div class="level-left">
-
+    <p class="level-item" routerLink="/home" routerLinkActive="active-link">Home</p>
+    <p class="level-item" routerLink="/about" routerLinkActive="active-link">About</p>
+    <p class="level-item" routerLink="/blogs" routerLinkActive="active-link">Blog</p>
   </div>
   <div class="level-right">
-    <p class="level-item" routerLink="/home"><strong>Home</strong></p>
-    <p class="level-item" routerLink="/about"><a>About</a></p>
   </div>
 </nav>
 
 <section class="hero">
   <div class="hero-body">
     <div class="container">
-      <h1 class="title">{{title || 'Working Title'}}</h1>
-      <h2 class="subtitle">{{subTitle || 'TBD'}}</h2>
+      <h1 class="title">{{(pageService.hasTitle | async) ? (pageService.title | async) : 'Oops!'}}</h1>
+      <h2 class="subtitle">
+        <p>{{(pageService.hasSubTitle | async) ? (pageService.subTitle | async) : 'Still working on this'}}</p>
+      </h2>
     </div>
   </div>
 </section>
@@ -26,9 +28,15 @@
 </section>
 
 <footer class="footer">
-  <div class="list">
+  <div class="content has-text-centered">
     <div>
-      <icon-link [icon]="githubIcon" href="https://github.com/daniefer">github</icon-link>
+      <p>
+        Head on over to <icon-link [icon]="githubIcon" href="https://github.com/daniefer">github</icon-link> and
+        checkout what I have done. You can also find me on <icon-link [icon]="linkedinIcon"
+          href="https://www.linkedin.com/in/ferguson-dan/">LinkedIn</icon-link>
+        if that is more your jam or listen to my occasional ramblings on <icon-link [icon]="twitterIcon"
+          href="https://twitter.com/devdanaf">Twitter</icon-link>.
+      </p>
     </div>
   </div>
 </footer>

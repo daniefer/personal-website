@@ -1,10 +1,21 @@
 @import "bulma";
 
+$link: #fff;
+
 footer {
     padding-bottom: 34px;
+    margin-top: 34px;
 }
 
 nav {
     padding: 15px 15px;
     background-color: $primary;
+}
+
+p {
+    display: inline;
+}
+
+.active-link {
+    font-weight: bold;
 }

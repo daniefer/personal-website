@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { PageService } from 'src/services/page.service';
 
 
 @Component({
@@ -8,7 +9,12 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+
+  constructor(public pageService: PageService) {
+
+  }
+
   public githubIcon = faGithub;
-  public subTitle = 'You know that guy Dan?';
-  public title = 'Dan Ferguson';
+  public linkedinIcon = faLinkedin;
+  public twitterIcon = faTwitter;
 }

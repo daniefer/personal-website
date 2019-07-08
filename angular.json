@@ -34,7 +34,8 @@
             "stylePreprocessorOptions": {
               "includePaths": [
                 "node_modules",
-                "node_modules/bulma/sass/utilities"
+                "node_modules/bulma/sass/utilities",
+                "node_modules/bulma-extensions"
               ]
             },
             "scripts": []
