@@ -1,9 +1,8 @@
-import { Component, ComponentFactoryResolver, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { PageService } from 'src/services/page.service';
 
-import { EntryMetadata } from '../entries/entries';
-import { PostMetadata } from '../entries/post-metadata';
-import { Router } from '@angular/router';
+import { EntryMetadata } from '../entries/entry-metadata';
 
 interface BlogEntry {
   path: string;
