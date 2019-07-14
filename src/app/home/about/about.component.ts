@@ -1,5 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { PageService } from 'src/services/page.service';
+import { AboutViewModel } from './about.vm';
 
 @Component({
   selector: 'app-about',
@@ -7,6 +8,8 @@ import { PageService } from 'src/services/page.service';
   styleUrls: ['./about.component.scss']
 })
 export class AboutComponent implements OnInit, OnDestroy {
+
+  public vm = new AboutViewModel();
 
   constructor(private _pageService: PageService) { }
 

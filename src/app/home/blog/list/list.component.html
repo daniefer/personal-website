@@ -1,30 +1,24 @@
-<div class="container" *ngFor="let post of Entries">
-
-  <!-- <div class="columns is-striped">
-    <div class="column is-10 is-offset-1">
-      <a [attr.href]="'blogs/' + post.path">{{ post.title }}</a>
-    </div>
-  </div> -->
-
-  <div class="card">
-    <div class="card-content">
-      <div class="media">
-        <div class="media-left">
-          <figure class="image is-48x48">
-            <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
-          </figure>
+<section class="section">
+  <div class="container" *ngFor="let post of Entries">
+    <div class="card" (click)="navTo(post)">
+      <div class="card-content">
+        <div class="media">
+          <div class="media-left">
+            <figure class="image is-48x48">
+              <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
+            </figure>
+          </div>
+          <div class="media-content">
+            <p class="title is-4">{{post.title}}</p>
+            <p class="subtitle is-6"><time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time></p>
+          </div>
         </div>
-        <div class="media-content">
-          <p class="title is-4">{{post.title}}</p>
-          <p class="subtitle is-6"><time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time></p>
-        </div>
-      </div>
 
-      <div class="content">
-        {{post.teaser}}
-        <br *ngIf="post.teaser">
+        <div class="content">
+          {{post.teaser}}
+          <br *ngIf="post.teaser">
+        </div>
       </div>
     </div>
   </div>
-
-</div>
+</section>

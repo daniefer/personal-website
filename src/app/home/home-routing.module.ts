@@ -17,7 +17,7 @@ const routes: Routes = [
     component: AboutComponent
   },
   {
-    path: 'blogs',
+    path: 'blog',
     component: BlogComponent,
     children: [
       {

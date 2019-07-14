@@ -11,7 +11,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   constructor(private _pageService: PageService) { }
 
   ngOnInit() {
-    this._pageService.setTitle("Welcome stranger", "What's that dude up to?")
+    this._pageService.setTitle("Welcome stranger", "What's that guy Dan up to these days?")
   }
 
   ngOnDestroy(): void {

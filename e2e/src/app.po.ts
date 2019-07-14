@@ -1,11 +1,12 @@
-import { browser, by, element } from 'protractor';
+import { by, element } from 'protractor';
+import { BasePage } from './base.po';
 
-export class AppPage {
-  navigateTo() {
-    return browser.get(browser.baseUrl) as Promise<any>;
+export class AppPage extends BasePage {
+  getTitleText() {
+    return element(by.css('.hero .title')).getText() as Promise<string>;
   }
 
-  getTitleText() {
-    return element(by.css('app-root h1')).getText() as Promise<string>;
+  getSubTitleText() {
+    return element(by.css('.hero .subtitle')).getText() as Promise<string>;
   }
 }

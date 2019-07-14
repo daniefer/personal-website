@@ -1,8 +1,9 @@
-import { Component, OnInit, Injector, ComponentFactory, ComponentFactoryResolver, OnDestroy } from '@angular/core';
-import { Route } from '@angular/router';
-import { Entries } from '../entries/entries';
-import { PostMetadata } from '../entries/post-metadata';
+import { Component, ComponentFactoryResolver, OnDestroy, OnInit } from '@angular/core';
 import { PageService } from 'src/services/page.service';
+
+import { EntryMetadata } from '../entries/entries';
+import { PostMetadata } from '../entries/post-metadata';
+import { Router } from '@angular/router';
 
 interface BlogEntry {
   path: string;
@@ -17,15 +18,19 @@ interface BlogEntry {
 })
 export class ListComponent implements OnInit, OnDestroy {
 
-  public Entries: BlogEntry[] = Entries.map(r => {
-    const ref = this._factory.resolveComponentFactory<PostMetadata>(r.component).create(null)
+  public Entries: BlogEntry[] = EntryMetadata.filter(x => x.published).map(x => {
     return {
-      path: r.path,
-      title: ref.instance.title
+      path: x.path,
+      title: x.title,
+      description: x.description
     };
   });
 
-  constructor(private _factory: ComponentFactoryResolver, private _pageService: PageService) { }
+  constructor(private _router: Router, private _pageService: PageService) { }
+
+  navTo(post: BlogEntry) {
+    this._router.navigate(['blog', post.path])
+  }
 
   ngOnInit() {
     this._pageService.setTitle("Posts", "")

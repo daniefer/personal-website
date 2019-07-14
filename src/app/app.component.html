@@ -1,42 +1,43 @@
-<!--The content below is only a placeholder and can be replaced.-->
-
 <nav class="level">
   <div class="level-left">
     <p class="level-item" routerLink="/home" routerLinkActive="active-link">Home</p>
     <p class="level-item" routerLink="/about" routerLinkActive="active-link">About</p>
-    <p class="level-item" routerLink="/blogs" routerLinkActive="active-link">Blog</p>
+    <p class="level-item" routerLink="/blog" routerLinkActive="active-link">Blog</p>
   </div>
   <div class="level-right">
   </div>
 </nav>
 
-<section class="hero">
-  <div class="hero-body">
-    <div class="container">
-      <h1 class="title">{{(pageService.hasTitle | async) ? (pageService.title | async) : 'Oops!'}}</h1>
-      <h2 class="subtitle">
-        <p>{{(pageService.hasSubTitle | async) ? (pageService.subTitle | async) : 'Still working on this'}}</p>
-      </h2>
-    </div>
-  </div>
-</section>
+<div class="columns">
+  <div class="column is-7 is-offset-2">
+    <header class="hero">
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title">{{(pageService.hasTitle | async) ? (pageService.title | async) : 'Oops!'}}</h1>
+          <h2 class="subtitle">
+            <p>{{(pageService.hasSubTitle | async) ? (pageService.subTitle | async) : 'Still working on this'}}</p>
+          </h2>
+        </div>
+      </div>
+    </header>
 
-<section>
-  <div class="container">
-    <router-outlet></router-outlet>
-  </div>
-</section>
 
-<footer class="footer">
-  <div class="content has-text-centered">
-    <div>
-      <p>
-        Head on over to <icon-link [icon]="githubIcon" href="https://github.com/daniefer">github</icon-link> and
-        checkout what I have done. You can also find me on <icon-link [icon]="linkedinIcon"
-          href="https://www.linkedin.com/in/ferguson-dan/">LinkedIn</icon-link>
-        if that is more your jam or listen to my occasional ramblings on <icon-link [icon]="twitterIcon"
-          href="https://twitter.com/devdanaf">Twitter</icon-link>.
-      </p>
-    </div>
+    <main>
+      <router-outlet></router-outlet>
+    </main>
+
+    <footer class="footer">
+      <div class="content has-text-centered">
+        <div>
+          <p>
+            Head on over to <icon-link [icon]="aboutVm.githubIcon" [href]="aboutVm.githubUrl">github</icon-link> and
+            checkout what I have done. You can also find me on <icon-link [icon]="aboutVm.linkedInIcon"
+              [href]="aboutVm.linkedInUrl">LinkedIn</icon-link>
+            if that is more your jam or listen to my occasional ramblings on <icon-link [icon]="aboutVm.twitterIcon"
+              [href]="aboutVm.twitterUrl">Twitter</icon-link>.
+          </p>
+        </div>
+      </div>
+    </footer>
   </div>
-</footer>
+</div>
