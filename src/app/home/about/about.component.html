@@ -3,22 +3,47 @@
     <h3 class="title">Who am I?</h3>
     <div class="content">
       <p>
-        Hello, I am Dan. Thanks for virtually stopping by. I live in the wonderfully weird Austin, TX with mt wife and
+        Hello, I am Dan. Thanks for virtually stopping by. I live in the wonderfully weird Austin, TX with my wife and 2
         <a href="https://www.instagram.com/peter_and_patches/">doges</a>. I am into non-scary movies/shows, travel (who
-        isn't really), and sharing ideas.
+        isn't really), and sharing ideas. I am pretty new to the blog-o-sphere, but try to post on a regular basis.
+        Mostly about tech related stuff; however, I find myself learning more about electrics these days so some pretty
+        basic electronics may slip in.
       </p>
       <p>
-        If you find yourself in Austin sometime and want talk tech hit me up on <icon-link [icon]="vm.twitterIcon"
-          [href]="vm.twitterUrl"></icon-link> and we can get a coffee/beer and teach each other something new.
+
       </p>
       <p>
-        Your probably wondering at this point what the hell I do professionally, well here is your chance! I am full
-        stack
-        software engineer working at <a [attr.href]="vm.currentEmployerWUrl">{{ vm.currentEmployer }}</a> with an <a
-          [attr.href]="vm.teamPath">awesome team</a>. My stack is primarily a .NET/Angular, but I have been know to hang
-        with a few of the <a routerLink="/blog/lang-dabbling">new kids on the block</a>. I am all about that .NET life
-        and
-        love the ecosystem as well as the new, open, and innovative Microsoft.
+        You're probably wondering at this point what the hell I do <i>professionally</i>, well here is your chance! I am
+        fullstack software engineer working at <a [attr.href]="vm.currentEmployerUrl">{{ vm.currentEmployer }}</a>
+        with a small but awesome team. My stack is primarily a .NET/Angular, but I have been
+        know to hang with a few of the <a routerLink="/blog/lang-dabbling">new kids on the block</a>. I am all about
+        that .NET life: love the ecosystem, cross platformieness, and the new open source Microsoft.
+      </p>
+    </div>
+  </div>
+</section>
+<section class="section">
+  <div class="container">
+    <h3 class="title">Contact me</h3>
+    <div class="content">
+      <p>
+        Want to collaborate? New to the .NET ecosystem? New to programming? You can reach me on the platforms below or
+        good old fashion email.
+      </p>
+      <ul class="no-bullets">
+        <li>
+          <icon-link [icon]="vm.twitterIcon" [href]="vm.twitterUrl">Twitter</icon-link>
+        </li>
+        <li>
+          <icon-link [icon]="vm.linkedInIcon" [href]="vm.linkedInUrl">LinkedIn</icon-link>
+        </li>
+        <li>
+          <icon-link [icon]="vm.emailIcon" [href]="'mailto: ' + vm.email">{{vm.email}}</icon-link>
+        </li>
+      </ul>
+      <p>
+        I also have a few projects on <icon-link [icon]="vm.githubIcon" [href]="vm.githubUrl">github
+        </icon-link> if you want to check them out.
       </p>
     </div>
   </div>
