@@ -1,11 +1,11 @@
 <section class="section">
-  <div class="container" *ngFor="let post of Entries">
-    <div class="card" (click)="navTo(post)">
+  <div class="c-blogPostList container" *ngFor="let post of Entries">
+    <div class="c-postLink card" (click)="navTo(post)">
       <div class="card-content">
         <div class="media">
           <div class="media-left">
             <figure class="image is-48x48">
-              <img src="assets/96x96.png" alt="Placeholder image">
+              <img src="assets/96x96.png" alt="Placeholder image" />
             </figure>
           </div>
           <div class="media-content">

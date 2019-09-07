@@ -10,8 +10,8 @@ import { AboutViewModel } from './main/about/about.vm';
 })
 export class AppComponent {
 
+  menuOpen = false;
   aboutVm = new AboutViewModel();
   constructor(public pageService: PageService) {
-
   }
 }

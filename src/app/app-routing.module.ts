@@ -5,7 +5,7 @@ import { NotFoundComponent } from './main/error-pages/not-found/not-found.compon
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/home',
+    redirectTo: '/about',
     pathMatch: 'full'
   },
   {

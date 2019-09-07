@@ -2,7 +2,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { PageService } from 'src/services/page.service';
 
-import { EntryMetadata } from '../entries/entry-metadata';
+import { Entries } from '../entries/entries';
 
 interface BlogEntry {
   path: string;
@@ -17,7 +17,7 @@ interface BlogEntry {
 })
 export class ListComponent implements OnInit, OnDestroy {
 
-  public Entries: BlogEntry[] = EntryMetadata.filter(x => x.published).map(x => {
+  public Entries: BlogEntry[] = Entries.filter(x => x.published).map(x => {
     return {
       path: x.path,
       title: x.title,

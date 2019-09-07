@@ -2,20 +2,39 @@
 
 $link: #fff;
 
-footer {
-    padding-bottom: 34px;
-    margin-top: 34px;
+.c-footer {
+  padding: 0 20px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-nav {
-    padding: 15px 15px;
-    background-color: $primary;
+.c-header,
+.c-navbar {
+  padding: 15px 15px;
+  background-color: $primary;
+}
+
+.navbar-item:hover,
+.navbar-item:active,
+.navbar-item:focus {
+  background-color: transparent !important;
+  color: inherit !important;
 }
 
 p {
-    display: inline;
+  display: inline;
 }
 
 .active-link {
-    font-weight: bold;
+  font-weight: bold;
+}
+
+.c-postLink {
+  cursor: pointer;
+}
+
+.c-mainContent {
+  min-height: calc(100vh - 168px);
 }

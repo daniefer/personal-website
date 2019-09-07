@@ -1,0 +1,28 @@
+caption {
+  display: inline-block;
+}
+
+ol,
+ul {
+  margin-bottom: 20px;
+}
+
+.c-featuredImage__wrap {
+}
+
+.c-featuredImage {
+  max-width: none;
+  width: 80vw;
+  transform: translate(-50%);
+  margin-left: 50%;
+
+  height: 400px;
+  background-size: cover;
+  background-position: center center;
+}
+
+.c-featuredImage__caption {
+  display: inline-block;
+  font-style: italic;
+  font-size: 12px;
+}

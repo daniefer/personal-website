@@ -2,16 +2,26 @@ import { Route } from '@angular/router';
 
 import { BuildingABlogComponent } from './building-a-blog/building-a-blog.component';
 import { LangDabblingComponent } from './lang-dabbling/lang-dabbling.component';
+import { PostMetadata } from './post-metadata';
 
-export const Entries: Array<Route & { enabled: boolean }> = [
+export const Components = [
+    BuildingABlogComponent,
+    LangDabblingComponent
+]
+
+export const Entries: Array<Route & PostMetadata> = [
     {
         path: 'building-a-blog',
         component: BuildingABlogComponent,
-        enabled: true
+        published: true,
+        title: 'Blogging with ng',
+        description: ''
     },
     {
         path: 'lang-dabbling',
         component: LangDabblingComponent,
-        enabled: false
+        published: false,
+        title: '',
+        description: ''
     },
 ];

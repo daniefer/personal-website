@@ -1,43 +1,56 @@
-<nav class="level">
-  <div class="level-left">
-    <p class="level-item" routerLink="/home" routerLinkActive="active-link">Home</p>
-    <p class="level-item" routerLink="/about" routerLinkActive="active-link">About</p>
-    <p class="level-item" routerLink="/blog" routerLinkActive="active-link">Blog</p>
-  </div>
-  <div class="level-right">
-  </div>
-</nav>
+<div class="c-header">
+  <nav class="navbar c-navbar container" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="/">
+        <h2 class="title">D Man Fergs</h2>
+      </a>
 
-<div class="columns">
-  <div class="column is-7 is-offset-2">
-    <header class="hero">
-      <div class="hero-body">
-        <div class="container">
-          <h1 class="title">{{(pageService.hasTitle | async) ? (pageService.title | async) : 'Oops!'}}</h1>
-          <h2 class="subtitle">
-            <p>{{(pageService.hasSubTitle | async) ? (pageService.subTitle | async) : 'Still working on this'}}</p>
-          </h2>
-        </div>
+      <a role="button" class="navbar-burger burger" [ngClass]="{'is-active': menuOpen}" (click)="menuOpen = !menuOpen"
+        aria-label="menu" [attr.aria-expanded]="menuOpen">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+
+    <div class="navbar-menu" [ngClass]="{'is-active': menuOpen}">
+      <div class="navbar-end">
+        <a class="navbar-item" routerLink="/about" routerLinkActive="active-link">About</a>
+        <a class="navbar-item" routerLink="/blog" routerLinkActive="active-link">Blog</a>
       </div>
-    </header>
+    </div>
+  </nav>
+</div>
 
-
-    <main>
-      <router-outlet></router-outlet>
-    </main>
-
-    <footer class="footer">
-      <div class="content has-text-centered">
-        <div>
-          <p>
-            Head on over to <icon-link [icon]="aboutVm.githubIcon" [href]="aboutVm.githubUrl">github</icon-link> and
-            checkout what I have done. You can also find me on <icon-link [icon]="aboutVm.linkedInIcon"
-              [href]="aboutVm.linkedInUrl">LinkedIn</icon-link>
-            if that is more your jam or listen to my occasional ramblings on <icon-link [icon]="aboutVm.twitterIcon"
-              [href]="aboutVm.twitterUrl">Twitter</icon-link>.
-          </p>
+<div class="container">
+  <div class="columns is-centered">
+    <div class="column is-7 c-mainContent">
+      <header class="hero">
+        <div class="hero-body">
+          <div class="container">
+            <h1 class="title">{{(pageService.hasTitle | async) ? (pageService.title | async) : 'Oops!'}}</h1>
+            <h2 class="subtitle">
+              <p>{{(pageService.hasSubTitle | async) ? (pageService.subTitle | async) : 'Still working on this'}}</p>
+            </h2>
+          </div>
         </div>
-      </div>
-    </footer>
+      </header>
+
+      <main>
+        <router-outlet></router-outlet>
+      </main>
+    </div>
   </div>
 </div>
+
+<footer class="c-footer has-background-info has-text-white">
+  <h3 class="content has-text-centered container subtitle has-text-white">
+    <!-- <div> -->
+    <!-- <blockquote class="subtitle"> -->
+    Knowing and not doing is the same as not knowing.
+    ~ Unknown
+    <!-- </blockquote> -->
+
+    <!-- </div> -->
+  </h3>
+</footer>
