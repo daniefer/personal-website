@@ -3,9 +3,9 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeRoutingModule } from './home/home-routing.module';
-import { HomeModule } from './home/home.module';
+import { MainModule } from './main/main.module';
 import { ComponentsModule } from './components/components.module';
+import { BlogModule } from './blog/blog.module';
 
 @NgModule({
   declarations: [
@@ -14,8 +14,9 @@ import { ComponentsModule } from './components/components.module';
   imports: [
     BrowserModule,
     ComponentsModule,
+    MainModule,
+    BlogModule,
     AppRoutingModule,
-    HomeModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

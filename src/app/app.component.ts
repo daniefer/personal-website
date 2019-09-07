@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { PageService } from 'src/services/page.service';
-import { AboutViewModel } from './home/about/about.vm';
+import { AboutViewModel } from './main/about/about.vm';
 
 
 @Component({
