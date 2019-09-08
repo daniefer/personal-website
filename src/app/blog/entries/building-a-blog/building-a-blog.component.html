@@ -1,29 +1,71 @@
 <section>
-  <figure class="c-featuredImage__wrap">
-    <div class="c-featuredImage" style="background-image: url('assets/blog/entries/building-a-blog-splashscreen.jpg')">
+  <figure>
+    <div class="c-featuredImage" style="background-image: url('assets/blog/entries/building-a-blog/splash-screen.jpg')">
     </div>
     <caption class="c-featuredImage__caption">Photo by Patrick Tomasso on Unsplash</caption>
   </figure>
 </section>
 <section class="section c-blogContent">
-  <h3></h3>
+  <h1 class="title">Why use Angular?</h1>
+  <p>My number one reason for choosing Angular is personal growth. Since I first started working with Angular way back
+    in 2014, a lot has been added, changed or removed. So keeping up with the latest <a
+      href="https://angular.io/guide/cheatsheet">patterns</a>, <a
+      href='https://angular.io/guide/lifecycle-hooks'>hooks</a> and supplemental libraries is quite a task already. Why
+    make it any harder by using some other framework for blogging? Being a full time developer does not mean I get to
+    design pages and web sites from scratch every day. Usually I am leaning on the hard work of others and plugging in
+    new features to existing web apps. Building a blog with Angular lets me stretch those muscles I don't always have
+    the luxury of using ever day.
+  </p>
+  <p>I already have a website (of sorts) and being able to plug this blog into my existing site without making a bunch
+    of changes is a huge sell for me. You can do this with most any other framework now days, but what makes this
+    particularly interesting to me is how easily I can keep the rest of my site fast by using lazy loading. Not everyone
+    who comes to my fantastic area of the interwebs is going to want to view my ramblings. They may just see my landing
+    page (coming soon) or jump off to my github. In which case why delay! Get there faster, enjoy the ride. </p>
+  <p>Angular has come a long way since the v1 in terms of tooling. When AngularJs first came on the scene there was
+    little tooling around it. You had to copy from an existing repo template or build the page up from scratch. I am not
+    going to sugar coat it, it was loathsome. I did everything I could to make new features I was building at the time
+    fit into the one working project I had, because starting from scratch was a non-starter. Now days however, we have
+    the angular-cli (queue <a href="https://www.youtube.com/watch?v=nsBByTiKfyY">chorus</a>)! It is easier than ever to
+    get started quickly and be confident that every page will load as long as the build succeeds. My love of build
+    errors over run time error probably stems from my early introduction to compile time languages (C# being my fav').
+    The angular-cli also added schematics support in v7 which means my creating of new modules is just 4 words away:
+    <code>ng g module blog</code></p>
+  <h1 class="title">Feature Goals</h1>
+  <p>Give all that rational, what are features I want out of this endeavor? Easy. Simple. Cheap. </p>
+  <p>I want it to be easy to learn what I need/want for the framework when I need it, while at the same not let the
+    plumbing get in the way of actually creating something. This means whatever structure, components, or modules I make
+    it needs to be easy to understand at a glance. I can't be scratching my head for 15 mins once a week/month trying to
+    figure out what steps I am supposed to follow in order to make a new post. I should be open up vscode, issue some
+    new command, and get to writing.</p>
+  <p>I want it to be simple to create new posts and customize things when I need to. I am aiming for 30 second startup
+    time and automated publishing/deployment. I can't waist time setting up in order to write new posts, spend a bunch
+    of time linking them around, adding photos, or troubleshooting issues with the site. Best to follow KISS here and
+    not get too fancy with building a WYSIWYG editor, databases, or apis calls. I am mostly writing English here, not
+    coding.</p>
+  <p>I want it to be cheap to host. That means ideally no database, no expensive web servers, no hosting costs. There
+    are a lot of free sites out there already: GitHub Pages, Netlify and even AWS or Azure (if you are willing to
+    relocate at the end of the free trials). Most of these have the restriction of no server side code though. Which
+    means if I want free-free hosting, I cannot be using some custom web server to serve my content. That also means the
+    only time my site can changes is before it is published, cause once it is all the file are static.</p>
+  <p>Some lesser goals I am wanting to achieve include:</p>
   <ul>
-    <li>learned this</li>
-    <li>and this</li>
-    <li>and that</li>
+    <li>Shared styling across all posts.</li>
+    <li>Control of when a post is published.</li>
+    <li>Searchable / SEO</li>
   </ul>
-
-  <ol>
-    <li>step 1</li>
-    <li>step 2</li>
-    <li>step 3</li>
-  </ol>
-
-  <p>
-    This is fji iej <strong>NO NO NO</strong> <em>unless</em> you're feeling crazy.
-  </p>
-
-  <p>
-    building-a-blog works!
-  </p>
+  <p>I won't be hitting these last bullets in this post, so <a>stay tuned</a>.</p>
+  <h1 class="title">Make the magic happen!</h1>
+  <p>Jumping in the deep end, here's how it is going down.</p>
+  <h1 class="title is-6">Make a website</h1>
+  <p>Remember when I said I "sort of" had a website, well that was true. I have been meaning to get this bad boy off the
+    drawing table, out of the garage and to the launch site for quite a while. I won't go into detail about how the site
+    was built exactly, but I will layout the project structure for ya:</p>
+  <figure>
+    <img src="assets/blog/entries/building-a-blog/pre-blog-folder-structure.png" />
+    <caption>Courtesy of <a href="https://twitter.com/carbon_app">@carbon_app</a></caption>
+  </figure>
+  <p>The idea here is my main juice is under <code>src/app/main</code>, shared components and services go under
+    <code>src/app/components</code> and <code>src/app/services</code> respectively. If I had any assets they would go
+    under a module folder under assets. Pretty basic really. Nothing fancy. <i>Easy.</i></p>
+  <p>Architecture</p>
 </section>

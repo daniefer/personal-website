@@ -5,9 +5,11 @@ caption {
 ol,
 ul {
   margin-bottom: 20px;
+  list-style: inside;
 }
 
-.c-featuredImage__wrap {
+p {
+  margin-bottom: 1em;
 }
 
 .c-featuredImage {

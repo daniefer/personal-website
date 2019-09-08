@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PostMetadata } from '../post-metadata';
-import { PageService } from 'src/services/page.service';
+import { PageService } from 'src/app/services/page.service';
 
 @Component({
   selector: 'app-building-a-blog',

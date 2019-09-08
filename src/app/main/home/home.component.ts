@@ -1,5 +1,5 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { PageService } from 'src/services/page.service';
+import { PageService } from 'src/app/services/page.service';
 
 @Component({
   selector: 'app-home',
