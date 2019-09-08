@@ -21,9 +21,4 @@ import { BlogModule } from './blog/blog.module';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule {
-  constructor() {
-    document.body.contentEditable = 'true';
-    document.designMode = 'on'
-  }
-}
+export class AppModule { }

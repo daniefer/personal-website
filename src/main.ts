@@ -8,5 +8,10 @@ if (environment.production) {
   enableProdMode();
 }
 
+if (environment.writingMode) {
+  document.body.contentEditable = 'true';
+  document.designMode = 'on'
+}
+
 platformBrowserDynamic().bootstrapModule(AppModule)
   .catch(err => console.error(err));
