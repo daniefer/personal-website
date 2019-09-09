@@ -5,18 +5,16 @@
         <div class="media">
           <div class="media-left">
             <figure class="image is-48x48">
-              <img src="assets/96x96.png" alt="Placeholder image" />
+              <img [src]="post.image" [alt]="post.imagePlaceholderText" />
             </figure>
           </div>
           <div class="media-content">
             <p class="title is-4">{{post.title}}</p>
-            <p class="subtitle is-6"><time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time></p>
+            <p class="subtitle is-6"><time>{{post.publishDate | date}}</time></p>
           </div>
         </div>
-
         <div class="content">
-          {{post.teaser}}
-          <br *ngIf="post.teaser">
+          <p *ngIf="post.description">{{post.description}}</p>
         </div>
       </div>
     </div>

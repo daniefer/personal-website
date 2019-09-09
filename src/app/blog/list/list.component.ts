@@ -3,11 +3,10 @@ import { Router } from '@angular/router';
 import { PageService } from 'src/app/services';
 
 import { Entries } from '../entries/entries';
+import { PostMetadata } from '../entries/post-metadata';
 
-interface BlogEntry {
+interface BlogEntry extends PostMetadata {
   path: string;
-  title: string;
-  teaser?: string;
 }
 
 @Component({
@@ -17,13 +16,7 @@ interface BlogEntry {
 })
 export class ListComponent implements OnInit, OnDestroy {
 
-  public Entries: BlogEntry[] = Entries.filter(x => x.published).map(x => {
-    return {
-      path: x.path,
-      title: x.title,
-      description: x.description
-    };
-  });
+  public Entries: BlogEntry[] = Entries.filter(x => x.published);
 
   constructor(private _router: Router, private _pageService: PageService) { }
 

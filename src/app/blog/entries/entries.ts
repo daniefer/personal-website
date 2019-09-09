@@ -9,19 +9,25 @@ export const Components = [
     LangDabblingComponent
 ]
 
-export const Entries: Array<Route & PostMetadata> = [
+export const Entries: Array<Route & PostMetadata & { path: string }> = [
     {
         path: 'building-a-blog',
         component: BuildingABlogComponent,
         published: true,
         title: 'Blogging with ng',
-        description: 'Some high level thoughts about blogging with Angular'
+        description: 'Some high level thoughts about blogging with Angular',
+        image: 'assets/blog/entries/building-a-blog/splash-screen.jpg',
+        imagePlaceholderText: 'Books pinned to a wall',
+        publishDate: '2019-8-9'
     },
     {
         path: 'lang-dabbling',
         component: LangDabblingComponent,
         published: false,
         title: '',
-        description: ''
+        description: '',
+        image: '',
+        imagePlaceholderText: '',
+        publishDate: ''
     },
 ];
