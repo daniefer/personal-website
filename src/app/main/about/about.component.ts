@@ -1,5 +1,5 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { PageService } from 'src/app/services/page.service';
+import { PageService } from 'src/app/services';
 import { AboutViewModel } from './about.vm';
 
 @Component({

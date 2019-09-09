@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { MainModule } from './main/main.module';
 import { ComponentsModule } from './components/components.module';
 import { BlogModule } from './blog/blog.module';
+import { ServicesModule } from './services/services.module';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { BlogModule } from './blog/blog.module';
   ],
   imports: [
     BrowserModule,
+    ServicesModule,
     ComponentsModule,
     MainModule,
     BlogModule,

@@ -1,6 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { PageService } from 'src/app/services/page.service';
+import { PageService } from 'src/app/services';
 
 import { Entries } from '../entries/entries';
 

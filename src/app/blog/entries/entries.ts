@@ -15,7 +15,7 @@ export const Entries: Array<Route & PostMetadata> = [
         component: BuildingABlogComponent,
         published: true,
         title: 'Blogging with ng',
-        description: ''
+        description: 'Some high level thoughts about blogging with Angular'
     },
     {
         path: 'lang-dabbling',

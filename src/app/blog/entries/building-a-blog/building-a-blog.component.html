@@ -6,66 +6,184 @@
   </figure>
 </section>
 <section class="section c-blogContent">
-  <h1 class="title">Why use Angular?</h1>
+  <h3 class="title">Why use Angular?</h3>
   <p>My number one reason for choosing Angular is personal growth. Since I first started working with Angular way back
-    in 2014, a lot has been added, changed or removed. So keeping up with the latest <a
+    in 2014 (called AngularJs then), a lot has been added, changed or removed. So keeping up with the latest <a
       href="https://angular.io/guide/cheatsheet">patterns</a>, <a
-      href='https://angular.io/guide/lifecycle-hooks'>hooks</a> and supplemental libraries is quite a task already. Why
-    make it any harder by using some other framework for blogging? Being a full time developer does not mean I get to
-    design pages and web sites from scratch every day. Usually I am leaning on the hard work of others and plugging in
-    new features to existing web apps. Building a blog with Angular lets me stretch those muscles I don't always have
-    the luxury of using ever day.
+      href='https://angular.io/guide/lifecycle-hooks'>hooks</a> and <a href="https://ngrx.io/">supplemental
+      libraries</a> is quite a task already. Why make it any harder by using some other framework for blogging? Being a
+    full-time developer doesn't mean I get to design pages and web sites from scratch every day either. Usually, I am
+    leaning on the hard work of others and plugging in new features to existing web apps. Building a blog with Angular
+    lets me stretch those muscles I don't always have the luxury of using ever day: standing up apps from the ground up.
   </p>
   <p>I already have a website (of sorts) and being able to plug this blog into my existing site without making a bunch
-    of changes is a huge sell for me. You can do this with most any other framework now days, but what makes this
+    of changes is a huge sell for me. You can do this with almost any other framework now, but what makes this
     particularly interesting to me is how easily I can keep the rest of my site fast by using lazy loading. Not everyone
     who comes to my fantastic area of the interwebs is going to want to view my ramblings. They may just see my landing
-    page (coming soon) or jump off to my github. In which case why delay! Get there faster, enjoy the ride. </p>
+    page (coming soon) or jump off to my GitHub. In which case why delay! Get there faster, enjoy the ride.</p>
   <p>Angular has come a long way since the v1 in terms of tooling. When AngularJs first came on the scene there was
     little tooling around it. You had to copy from an existing repo template or build the page up from scratch. I am not
-    going to sugar coat it, it was loathsome. I did everything I could to make new features I was building at the time
-    fit into the one working project I had, because starting from scratch was a non-starter. Now days however, we have
-    the angular-cli (queue <a href="https://www.youtube.com/watch?v=nsBByTiKfyY">chorus</a>)! It is easier than ever to
-    get started quickly and be confident that every page will load as long as the build succeeds. My love of build
-    errors over run time error probably stems from my early introduction to compile time languages (C# being my fav').
-    The angular-cli also added schematics support in v7 which means my creating of new modules is just 4 words away:
-    <code>ng g module blog</code></p>
-  <h1 class="title">Feature Goals</h1>
-  <p>Give all that rational, what are features I want out of this endeavor? Easy. Simple. Cheap. </p>
-  <p>I want it to be easy to learn what I need/want for the framework when I need it, while at the same not let the
-    plumbing get in the way of actually creating something. This means whatever structure, components, or modules I make
-    it needs to be easy to understand at a glance. I can't be scratching my head for 15 mins once a week/month trying to
-    figure out what steps I am supposed to follow in order to make a new post. I should be open up vscode, issue some
-    new command, and get to writing.</p>
-  <p>I want it to be simple to create new posts and customize things when I need to. I am aiming for 30 second startup
-    time and automated publishing/deployment. I can't waist time setting up in order to write new posts, spend a bunch
-    of time linking them around, adding photos, or troubleshooting issues with the site. Best to follow KISS here and
-    not get too fancy with building a WYSIWYG editor, databases, or apis calls. I am mostly writing English here, not
-    coding.</p>
+    going to sugar coat it, it was loathsome. I did everything I could to make new features fit into the project I had
+    because starting from scratch was a non-starter. Nowadays, however, we have the angular-cli (queue <a
+      href="https://www.youtube.com/watch?v=nsBByTiKfyY">chorus</a>)! It is easier than ever to
+    get started quickly and be confident that everything is configured correctly as soon as <code>npm start</code>
+    completes. My love of build vs runtime errors probably stems from my early introduction to compile-time languages
+    (C# being my fav'). The angular-cli also added schematics support in v7 which means my creating of new modules is
+    just 4 words away:
+    <code>ng g module blog</code>. Another great move the Angular team took was to write Angular 2+ in TypeScript
+    instead of JavaScript. Giving me some since of type safety saves me from the daily bugs caused my missing lett<i
+      class="strikethrough">e</i>rs, wrong wor<i class="strikethrough">k</i>ds and fat finger<i
+      class="strikethrough">l</i>ings that normally would not be caught until after I spin up web server and
+    get to clickin'.
+  </p>
+  <h3 class="title">Feature Goals</h3>
+  <p>Most of the rationale for why I undertook this endeavor has been subjective so far. So what are the features I want
+    out of this endeavor? Easy. Simple. Cheap.</p>
+  <p>I want it to be easy to learn what I need/want for the framework when I need it, while at the same time not get
+    bogged down in plumbing and infrastructure. The idea is to actually create something after all. This means whatever
+    structure, components, or modules I make it needs to be easy to understand at a glance. I can't be scratching my
+    head for 15 mins once a week/month trying to figure out what steps I am supposed to follow to make a new post. I
+    should be open up vscode, issue some new command, and get to writing.</p>
+  <p>I want it to be simple to create new posts and customize things when I need to. I am aiming for a 30 second startup
+    time and automated publishing/deployment. I can't waist time setting up to write, spend hours on media, or
+    troubleshooting issues with the site. Best to follow KISS here and not get too fancy with building a WYSIWYG,
+    databases, or APIs calls. I am mostly writing English here, not coding. I could spend months optimizing this or that
+    to save a few seconds here and there, but if I never publish an article it was all for not.</p>
   <p>I want it to be cheap to host. That means ideally no database, no expensive web servers, no hosting costs. There
     are a lot of free sites out there already: GitHub Pages, Netlify and even AWS or Azure (if you are willing to
-    relocate at the end of the free trials). Most of these have the restriction of no server side code though. Which
-    means if I want free-free hosting, I cannot be using some custom web server to serve my content. That also means the
-    only time my site can changes is before it is published, cause once it is all the file are static.</p>
-  <p>Some lesser goals I am wanting to achieve include:</p>
+    relocate at the end of the free trials). Most of these have the restriction of no server-side code though. This
+    means if I want free-free hosting, I cannot be using some custom webserver to serve my content.</p>
+  <p>Some lesser technical goals I am wanting to achieve include:</p>
   <ul>
     <li>Shared styling across all posts.</li>
     <li>Control of when a post is published.</li>
     <li>Searchable / SEO</li>
   </ul>
-  <p>I won't be hitting these last bullets in this post, so <a>stay tuned</a>.</p>
-  <h1 class="title">Make the magic happen!</h1>
-  <p>Jumping in the deep end, here's how it is going down.</p>
-  <h1 class="title is-6">Make a website</h1>
+  <p>I won't be hitting these last bullets in this post, so <a routerLink="/blog">stay tuned</a>.</p>
+  <h3 class="title">Make the magic happen!</h3>
+  <p>If you are more of a code gal/guy, visit the TLDR version,
+    <a href="https://github.com/daniefer/personal-website" target="_blank">daniefer/personal-website</a>, to dig around.
+    Otherwise, stick around for a quick into to the layout and motive behind
+    the site.</p>
+  <h6 class="title is-6">Make a website</h6>
   <p>Remember when I said I "sort of" had a website, well that was true. I have been meaning to get this bad boy off the
     drawing table, out of the garage and to the launch site for quite a while. I won't go into detail about how the site
     was built exactly, but I will layout the project structure for ya:</p>
-  <figure>
+  <figure class="c-image__inline">
     <img src="assets/blog/entries/building-a-blog/pre-blog-folder-structure.png" />
-    <caption>Courtesy of <a href="https://twitter.com/carbon_app">@carbon_app</a></caption>
+    <caption class="c-featuredImage__caption">Courtesy of <a href="https://twitter.com/carbon_app">@carbon_app</a>
+    </caption>
   </figure>
   <p>The idea here is my main juice is under <code>src/app/main</code>, shared components and services go under
     <code>src/app/components</code> and <code>src/app/services</code> respectively. If I had any assets they would go
     under a module folder under assets. Pretty basic really. Nothing fancy. <i>Easy.</i></p>
-  <p>Architecture</p>
+  <h6 class="title is-6">The BlogModule</h6>
+  <p>The name for me conjures thoughts of <a href="https://www.youtube.com/watch?v=GODDLgM1gKo">1958's The Blob</a>. Not
+    sure why exactly. I have never actually seen the movie outside quick clips here in there. Maybe I have always been a
+    little intimidated by creating a new module; all the different things you have to think about: imports, exports,
+    extensibility, etc. Either that or I have mild dyslexia and a wandering mind. Back to the topic at hand though.
+    Creating the module
+    with <code>ng g module src/app/blog</code> was the easy part. Getting there was a bit of a roundabout, mostly
+    because naming things if one of the two hardest problems in software engineering. <code>BlobModule</code> started
+    under the main folder, moved to <code>src</code> and then to under <code>app</code> where it sits now. Why did I
+    settle on where it is now? First off, one of the main goals was to keep the blog portion separate from the rest of
+    the site, so keeping under the `main` folder was a no go. Second, while the <code>BlogModule</code> could
+    technically be published separately and put under any angular app, but I wanted to keep it <i>simple</i>. Moving it
+    to its own repo would have only complicated matters for the same of complicating matters. Under <code>app</code> is
+    a happy middle ground that will let me wire it all together but not too tightly.</p>
+  <p>This new module will also be completely self-contained. Meaning, routing, components, services, and all dependent
+    modules will all be specified within this new module. The new module is pretty bare:</p>
+  <pre>{{'@NgModule({
+  declarations: [
+    BlogComponent,
+    ListComponent,
+    ...Entries
+  ],
+  imports: [
+    CommonModule,
+    ServicesModule,
+    ComponentsModule,
+    BlogRoutingModule
+  ]
+})
+export class BlogModule { }'}}</pre>
+  <p>The key thing to notice here is I am importing each of my blog entries so I don't go goofing up the module somehow.
+    All new entries will update the entries.ts file instead. This file also has some interesting metadata around routing
+    which I plan to leverage when I implement "publishing". I use quotes there because you could look at the source
+    of the page still and read unfinished entries, but I don't care. Power to you if you are that interested in what I
+    have to say.</p>
+  <pre>{{'export const Entries: Array&lt;Route & PostMetadata&gt; = [
+  {
+      path: \'building-a-blog\',
+      component: BuildingABlogComponent,
+      published: true,
+      title: \'Blogging with ng\',
+      description: \'Some high level thoughts about blogging with Angular\'
+  },
+  {
+      path: \'lang-dabbling\',
+      component: LangDabblingComponent,
+      published: false,
+      title: \'\',
+      description: \'\'
+  },
+];'}}</pre>
+  <p>Merging of this custom type <code>PostMetadata</code> lets me define my routes next to my metadata in one place and
+    then build the list view dynamically. To keep this as low maintenance as possible I want the list page to
+    auto-update. Routing also updates using a similar pattern.</p>
+  <pre>{{'const routes: Routes = [
+  {
+    path: \'blog\',
+    component: BlogComponent,
+    children: [
+      ...Entries,
+      {
+          path: \'\',
+          component: ListComponent
+      },
+    ]
+  }
+];'}}</pre>
+  <p>Now, with all that done, the only line of code I need to add to my main app module is this:</p>
+  <pre>{{'@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule,
+    ServicesModule,
+    ComponentsModule,
+    MainModule,
+    BlogModule, &lt;-------HERE
+    AppRoutingModule,
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }'}}</pre>
+  <p>Yeah, it took a bit more work to split it out, but it was worth it for the learning experience. It also means if I
+    want to move the blog to a sub-domain, all I have to do is up and move is 1 folder and remove one line of code. 😁
+  </p>
+  <h3 class="title">Deployment time!</h3>
+  <p>Finally got all the pesky coding done. Now I can move on to the actual launch! The whole reason I opened the
+    computer today! Because I want this to be <i>easy</i> and <i>simple</i> I opted to script as much as possible. That
+    means a few new scripts to the <code>package.json</code>.</p>
+  <pre>{{'{
+  ... excluded for brevity ...
+  "scripts": {
+    ... normal ng stuff ...
+    "publish-pages": "ng build --prod --output-path docs --base-href /personal-website/",
+    "postpublish-pages": "copy .\\docs\\index.html .\\docs\\404.html"
+  },
+  ... excluded for brevity ...
+}'}}</pre>
+  <p>This new publish command builds and publishes the app ready for GitHub Pages. I have opted for the docs folder path
+    instead of the branch since this repo is meant to be published there (for now). GitHub Pages needs to know to return
+    the same content when navigating
+    to an unknown page so my app's error page can handle it. So the <i>post*</i> script copies the
+    <code>index.html</code> into a new <code>404.html</code>. You might also notice the <code>--base-href</code> option,
+    which sets the base path all relative paths on the page will use.
+    This is because I wanted cheap, and there is no cheaper than 0 🤑. Scripting these steps means I can deploy using
+    CD/CI platform services like Azure DevOps or Netlify. I will save that work for another time though.</p>
+
 </section>

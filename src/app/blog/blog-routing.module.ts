@@ -9,11 +9,11 @@ const routes: Routes = [
         path: 'blog',
         component: BlogComponent,
         children: [
+            ...Entries,
             {
                 path: '',
                 component: ListComponent
             },
-            ...Entries//.filter(r => r.published)
         ]
     }
 ];

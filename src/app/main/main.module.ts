@@ -7,6 +7,7 @@ import { AboutComponent } from './about/about.component';
 import { NotFoundComponent } from './error-pages/not-found/not-found.component';
 import { HomeComponent } from './home/home.component';
 import { MainRoutingModule } from './main-routing.module';
+import { ServicesModule } from '../services/services.module';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { MainRoutingModule } from './main-routing.module';
   ],
   imports: [
     CommonModule,
+    ServicesModule,
     ComponentsModule,
     MainRoutingModule
   ]
