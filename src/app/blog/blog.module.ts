@@ -7,12 +7,14 @@ import { BlogRoutingModule } from './blog-routing.module';
 import { Components as Entries } from './entries/entries';
 import { BlogComponent } from './entry/blog.component';
 import { ListComponent } from './list/list.component';
+import { ForayIntoBakingComponent } from './entries/foray-into-baking/foray-into-baking.component';
 
 @NgModule({
   declarations: [
     BlogComponent,
     ListComponent,
-    ...Entries
+    ...Entries,
+    ForayIntoBakingComponent
   ],
   imports: [
     CommonModule,

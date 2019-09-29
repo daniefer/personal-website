@@ -2,10 +2,14 @@ caption {
   display: inline-block;
 }
 
-ol,
 ul {
   margin-bottom: 20px;
   list-style: inside;
+}
+
+ol {
+  margin-bottom: 20px;
+  list-style: inside decimal;
 }
 
 p {
